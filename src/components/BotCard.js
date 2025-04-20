@@ -1,6 +1,6 @@
 import React from "react";
 
-function BotCard ({bot, onClick, OnDischarge}) {
+function BotCard ({bot, onClick, onDischarge}) {
     return(
         <div className="bot-card" onClick={() => onClick(bot)}>
             <img src={bot.avatar_url} alt={bot.name} />
@@ -11,7 +11,7 @@ function BotCard ({bot, onClick, OnDischarge}) {
             <p>{bot.damage}</p>
             <button onClick={(e) => {
                 e.stopPropagation();
-                OnDischarge(bot.id);
+                onDischarge(bot.id);
                  }}>
                      </button>
 
